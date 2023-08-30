@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to left top, #394351, #584d69, #85516d, #aa5b5b, #b4743f);
+
+}
+body , .box-img{
+    background-repeat: no-repeat;
+}
+.Login-box{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 24.5rem;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.box-img{
+    background-image: url("../../bg/cozy-window-with-view-with-mountains-illustration-cartoon-flat-style_169016-27949.jpg");
+    height: 28rem;
+    width: 100%;
+    background-size: cover;
+
+}
+.Form-box{
+    background-color: rgb(38 35 35);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-info{
+    padding: 3rem 0rem;
+    width: 100%;
+}
+input[type=text] , input[type=password] , input[type=email]{
+    width: 70%;
+    height: 35px;
+    border-radius: 20px;
+    padding-left: 20px;
+}
+.form-info form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-info > p{
+    text-align: center;
+    padding: 0;
+    margin: 0rem 0rem 2rem 0rem;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+.options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 75%;
+    color: white;
+}
+.options p a{
+    text-decoration: none;
+    color: #9d9999;
+}
+.options p a:hover{
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+.login-btn button{
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    width: 7rem;
+    height: 39px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+.circle{
+    position: relative;
+    width: 100%;
+}
+.circle span{
+    position: absolute;
+    top: -20px;
+    right: 14rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    transform: scale(1.5);
+}
+.circle span img{
+ width: 100%;
+}
+
+.gradient-checkbox label{
+    position: relative;
+}
+input[type=checkbox]{
+    width: 1.3em;
+    height: 1.3em;
+    border-color: linear-gradient(45deg, #f3ec78, #af4261);
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked + label::before {
+    content: "✔";
+    color: white;
+    position: absolute;
+    left: -22px;
+}
+
+
+@media screen and (max-width:1441px) {
+    .circle span {
+        right: 16rem;
+    }
+    .Login-box{
+        margin: 2rem 25rem;
+    }
+}
+@media screen and (max-width:1335px) {
+    .circle span {
+        right: 14rem;
+    }
+}
+@media screen and (max-width:1025px) {
+    .circle span {
+        right: 11rem;
+    }
+    .Login-box{
+        margin: 2rem 20rem;
+    }
+}
+@media screen and (max-width:769px) {
+    .circle span {
+        right: 8rem;
+    }
+    .Login-box{
+        margin: 2rem 13rem;
+    }
+    .box-img {
+        height: 20rem;
+    }
+}
+@media screen and (max-width:426px) {
+    .circle span {
+        right: 11.3rem;
+    }
+    .Login-box {
+        width: 100%;
+        margin: 0rem;
+    }
+}
+@media screen and (max-width:376px) {
+    .circle span {
+        right: 10rem;
+    }
+    .Login-box {
+        width: 100%;
+        margin: 0rem;
+    }
+    .options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    color: white;
+    flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:321px) {
+    .circle span {
+        right: 8.3rem;
+    }
+    .Login-box {
+        width: 100%;
+        margin: 0rem;
+    }
+    .options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    color: white;
+    flex-wrap: wrap;
+    }
+}

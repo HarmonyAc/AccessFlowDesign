@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <title>User Dashboard</title>
+</head>
+<body>
+    <body class="bg-gray-100">
+        <div class="flex h-screen">
+            <!-- Sidebar -->
+            <aside class="w-64 bg-white shadow">
+                <div class="p-4">
+                    <div class="profile-container">
+                        <div class="profile">
+                            <img src="profile/p2.jpeg" alt="profile-admin" width="100%">
+                        </div>
+                    </div>
+                    <h2 class="text-xl font-semibold text-center welcome-text">Welcome, user</h2>
+                </div>
+                <nav class="p-4">
+                    <ul class="space-y-2 menu-text">
+                        <li><a href="#" class="text-blue-500 hover:text-blue-700">Home</a></li>
+                        <li><a href="#" class="text-blue-500 hover:text-blue-700">About</a></li>
+                        <li><a href="#" class="text-blue-500 hover:text-blue-700">Services</a></li>
+                        <li><a href="#" class="text-blue-500 hover:text-blue-700">Contact</a></li>
+                    </ul>
+                    <ul class=" menu-text">
+                        <li class="logout"><a href="index.html" class="text-red-500 hover:text-red-700">Sign Out</a></li>
+                    </ul>
+                </nav>
+            </aside>
+    
+            <!-- Content Area -->
+            <main class="flex-1 p-4">
+                <div class="max-w-screen-md mx-auto">
+                    <p style="font-weight: bold;">Your profile information:</p>
+                    <div class="bg-white rounded-lg p-4 shadow mt-4">
+                        <h2 class="text-lg font-semibold mb-2">Username: <span id="UsernameID"></span></h2>
+                        <p>Email: <b><span id="userEmail"></span></b></p>
+                        <p>Location: New York, USA</p>
+                        <p>Age: 30</p>
+                    </div>
+                </div>
+                <!-- Constrained content area -->
+               
+            <div class="widgets">
+                <!-- calendar -->
+                <div class="calendar max-w-screen-md bg-white rounded shadow">
+                    <div class="header">August 2023</div>
+                    <div class="days">
+                        <div class="day">Sun</div>
+                        <div class="day">Mon</div>
+                        <div class="day">Tue</div>
+                        <div class="day">Wed</div>
+                        <div class="day">Thu</div>
+                        <div class="day">Fri</div>
+                        <div class="day">Sat</div>
+                    </div>
+                    <div class="dates">
+                        <!-- Blank cells for the start of the month -->
+                        <div class="date empty"></div>
+                        <div class="date empty"></div>
+                        <div class="date">1</div>
+                        <!-- Days of the month -->
+                        <div class="date">2</div>
+                        <div class="date">3</div>
+                        <div class="date">4</div>
+                        <div class="date">5</div>
+                        <div class="date">6</div>
+                        <div class="date">7</div>
+                        <div class="date">8</div>
+                        <div class="date">9</div>
+                        <div class="date">10</div>
+                        <div class="date">11</div>
+                        <div class="date">12</div>
+                        <div class="date">13</div>
+                        <div class="date">14</div>
+                        <div class="date">15</div>
+                        <div class="date">16</div>
+                        <div class="date">17</div>
+                        <div class="date">18</div>
+                        <div class="date">19</div>
+                        <div class="date">20</div>
+                        <div class="date">21</div>
+                        <div class="date">22</div>
+                        <div class="date">23</div>
+                        <div class="date">24</div>
+                        <div class="date">25</div>
+                        <div class="date">26</div>
+                        <div class="date">27</div>
+                        <div class="date">28</div>
+                        <div class="date">29</div>
+                        <div class="date">30</div>
+                        <div class="date empty"></div>
+                        <div class="date empty"></div>
+                    </div>
+                </div>
+                 <!-- Recent Activities Widget -->
+            <div class="w-64 p-4 ml-4 bg-white rounded shadow recent-act">
+                <h2 class="text-lg font-semibold mb-4">Recent Activities</h2>
+                <ul class="space-y-2">
+                    <li class="text-sm">Updated user profiles</li>
+                    <li class="text-sm">Added new features</li>
+                    <li class="text-sm">Reviewed user feedback</li>
+                    <!-- Add more recent activities as needed -->
+                </ul>
+            </div>
+            </div>
+            </main>
+        </div>
+<!-- js -->
+<script src="assets/js/index.js"></script>
+<script>
+    var userEmail = localStorage.getItem("userEmail");
+    var UsernameID = localStorage.getItem("UsernameID");
+        document.getElementById("userEmail").textContent = userEmail;
+        document.getElementById("UsernameID").textContent = UsernameID;
+</script>
+</body>
+</html>
